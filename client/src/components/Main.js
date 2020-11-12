@@ -206,10 +206,10 @@ class Main extends React.Component {
           </div>
           )}
 
-          {this.state.loading && <button className="cancle-search" onClick={()=>{
+          {this.state.loading && <button className="cancel-search" onClick={()=>{
             this.setState({loading: false})}
           }>
-            Cancle <i className="mdi mdi-window-close"></i>
+            Cancel <i className="mdi mdi-window-close"></i>
           </button>}
 
           {this.state.searchFailed && <Error retryFunc={this.handleSearch}/>}

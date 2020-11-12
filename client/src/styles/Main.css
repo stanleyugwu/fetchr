@@ -162,7 +162,7 @@
     background: var(--trans-black);
     margin-top: 10vh;
   }
-  .results-wrapper .cancle-search {
+  .results-wrapper .cancel-search {
     border: 1px solid red;
     cursor: pointer;
     width: 20vw;

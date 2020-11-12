@@ -6,7 +6,7 @@ client/src/images
 */node_modules
 
 node_modules
-.env
+/.env
 *.json
 keys.js
 *.txt
