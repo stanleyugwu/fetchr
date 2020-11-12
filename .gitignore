@@ -2,12 +2,13 @@ client/build
 client/src/fonts
 client/src/images
 */.env
-*/*.json
+*/package-lock.json
 */node_modules
 
 node_modules
 /.env
-*.json
+/package-lock.json
 keys.js
+admin.json
 *.txt
 Oldserver.js
