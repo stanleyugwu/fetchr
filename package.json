@@ -1,16 +1,20 @@
 {
-    "name": "server",
+    "name": "fetchr-server",
     "version": "1.0.0",
-    "description": "Back-end server for Schedoolr",
+    "description": "Back-end server for Fetchr",
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "stir": "nodemon --http-parser=legacy server.js",
         "start": "node --http-parser=legacy server.js",
-        "serve": "live-server public/"
+        "serve": "live-server public/",
+        "build": "cd client && npm run build && cd ../ && npm start"
     },
+    "keywords":[
+        "fetchr","heroku","fetchrr"
+    ],
     "author": "Devvie",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "bing.search": "^1.0.1",
         "body-parser": "^1.19.0",
@@ -29,5 +33,9 @@
     },
     "devDependencies": {
         "nodemon": "^2.0.4"
+    },
+    "engines": {
+        "node": "12.x",
+        "npm": "6.x"
     }
 }
