@@ -1,0 +1,13 @@
+client/build
+client/src/fonts
+client/src/images
+*/.env
+*/*.json
+*/node_modules
+
+node_modules
+.env
+*.json
+keys.js
+*.txt
+Oldserver.js
