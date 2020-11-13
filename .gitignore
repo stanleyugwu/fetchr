@@ -1,6 +1,9 @@
-client/build
+#FOR HEROKU DEPLOY client/public client/src client/node_module client/.env 
+client/public
+client/src
 client/src/fonts
 client/src/images
+
 */.env
 */package-lock.json
 */node_modules

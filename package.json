@@ -8,7 +8,6 @@
         "stir": "nodemon --http-parser=legacy server.js",
         "start": "node --http-parser=legacy server.js",
         "serve": "live-server public/",
-        "build": "cd client && npm run build && cd ../ && npm start",
         "postinstall": "npm install --prefix ./client"
     },
     "keywords": [
