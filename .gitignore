@@ -1,5 +1,7 @@
 #FOR HEROKU DEPLOY client/public client/src client/node_module client/.env 
+#client/build
 client/public
+
 client/src
 client/src/fonts
 client/src/images
@@ -9,9 +11,9 @@ client/src/images
 */node_modules
 
 node_modules
-/.env
+#/.env
 /package-lock.json
-keys.js
-admin.json
+#keys.js
+#admin.json
 *.txt
 Oldserver.js
