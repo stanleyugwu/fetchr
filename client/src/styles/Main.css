@@ -1,0 +1,196 @@
+.main-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8vh 0;
+}
+.search-mode-toggler{
+  border: 1px solid var(--cta-primary);
+  border-top-left-radius: 3.5vh;
+  border-bottom-right-radius: 3.5vh;
+}
+.search-mode-toggler button:first-child {
+  border-top-left-radius: 3vh;
+}
+.search-mode-toggler button:nth-child(2){
+  border-bottom-right-radius: 3vh;
+}
+.search-mode-toggler button {
+    margin: auto;
+    padding: 1.8vh 2vw;
+    font-weight: 700;
+    border:none;
+    cursor: pointer;
+    color: var(--cta-primary);
+    font-family: "Raleway";
+    background: transparent;
+    outline: none;
+    transition: var(--transition);
+  }
+  .search-mode-toggler button.active {
+    background: var(--cta-primary);
+    color: var(--dark);
+  }
+  .search-mode-toggler button:not([class$="active"]):hover {
+    background: var(--cta-primary);
+    color: var(--dark);
+    opacity: 0.6;
+  }
+
+  .search-pane{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .search-pane form{
+      width: 50vw;
+  }
+
+  .search-pane .text-block{
+    margin: 5vh 0 3vh;
+  }
+
+  .text-block .boxLabel {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background: var(--dark);
+    box-shadow: 0 0 7px 2px #eb972e77;
+    border-top-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+  }
+  .boxLabel .searchbox-wrapper {
+    padding: 1.1vw;
+    width: 85%;
+    text-align: center;
+    padding-top: 2%;
+  }
+  .boxLabel .searchbox-wrapper input {
+    width: 90%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--cta-primary);
+    padding: 1.8% 0 1.5% 3%;
+    color: var(--cta-primary);
+    outline: none;
+    font-size: larger;
+    font-family: var(--font-family);
+  }
+  .boxLabel .searchbtn-wrapper {
+    width: 15%;
+    border-left: 1px inset var(--grey);
+  }
+  .searchbtn-wrapper button {
+    background: var(--dark);
+    cursor: pointer;
+    color: var(--cta-primary);
+    width: 100%;
+    border: none;
+    height: 100%;
+    padding: none;
+    transition: var(--transition);
+    border-bottom-right-radius: 4vw;
+  }
+  .searchbtn-wrapper button:hover {
+    background: var(--cta-primary);
+    color: var(--dark);
+  }
+  .searchbtn-wrapper button i {
+    font-size: 2.4rem;
+    line-height: 1;
+  }
+
+  .options-block {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    box-shadow: 0 2px 0 #dddddd22;
+    padding:1vh 0 2vh;
+    background: var(--trans-black);
+  }
+  .options-block .field{
+    cursor: pointer;
+        background: transparent;
+        margin-inline: 2%;
+        display: inline;
+        border: none;
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-weight: bolder;
+        color: var(--cta-primary);
+        border-bottom: 1px solid var(--cta-primary);
+        padding: 0.5vw;
+        transition: var(--transition);
+        transition-duration: 0.3s;
+  }
+  .options-block .field:hover {
+    opacity: 0.7;
+  }
+  .options-block .field:disabled {
+    cursor: initial;
+  }
+  .options-block .pagination input{
+      background: transparent;
+      border:none;
+      color: var(--cta-primary);
+      outline: none;
+      font-size: medium;
+      font-family: 'Raleway';
+      font-weight: 600;
+  }
+  .pagination input::-webkit-input-placeholder{
+      color: var(--cta-primary);
+  }
+  .options-block .pagination:hover{
+      opacity: 1;
+  }
+  .options-block > .field option {
+    background: var(--dark);
+    color: var(--cta-primary);
+    font-size: medium;
+    font-weight: 600;
+  }
+  .options-block .field option:first-child {
+    pointer-events: none;
+    user-select: none;
+    color: rgba(100, 100, 100, 0.5);
+  }
+
+  .results-wrapper{
+    width: 100%;
+    background: var(--trans-black);
+    margin-top: 10vh;
+  }
+  .results-wrapper .cancel-search {
+    border: 1px solid red;
+    cursor: pointer;
+    width: 20vw;
+    padding: 1vh;
+    display: block;
+    background: var(--dark);
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: red;
+    min-width: 120px;
+    margin: auto;
+  }
+  .results-wrapper .title-txt{
+    text-align: left;
+    margin: 10vh 0;
+  }
+  .title-txt .lefter {
+    border-bottom: 2px solid #ddd5;
+    width: 50vw;
+    text-align: right;
+  }
+  .lefter p {
+    padding-right: 1vw;
+    font-size: 1.2rem;
+    color: var(--grey);
+  }
+
+  .results-inner{
+    padding: 2vw;
+    margin-top: 2%;
+  }

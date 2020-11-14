@@ -1,0 +1,105 @@
+@media screen and (max-width: 920px) {
+    #root .App .header{
+        padding-top: 1vh;
+    }
+    .App .main-body .search-pane .search-mode-toggler button {
+        padding: 1.5vh 4vw;
+    }
+    .App .main-body .search-pane #search-form{
+        width: 90vw;
+    }
+    #search-form #searchbox{
+        font-size: 1.1rem;
+    }
+    #search-form .searchbtn-wrapper button i{
+        font-size: 2.3rem;
+    }
+    .options-block .pagination input::-webkit-input-placeholder{
+        font-size: 1rem;
+    }
+    #search-form .searchbtn-wrapper .loader-wrapper_v-small .circle{
+        animation-name: Bounce;
+    }
+    .main-body .results-wrapper{
+        margin-top: 3vh;
+    }
+    .results-wrapper .loader-wrapper_normal p{
+        font-size: calc(8px + 2vw);
+        margin-top: 20px;
+    }
+    .results-wrapper .loader-wrapper_normal .loader .circle{
+        width: 5vmin;
+        min-width: 20px;
+        height: 5vmin;
+        min-height: 20px;
+        margin-right: 1vw;
+        animation-name: Bouncee;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1100px){
+    .results-wrapper .loader-wrapper_normal p{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .results-wrapper .title-txt .lefter {
+        border-bottom: 2px solid #ddd4;
+        width: 100%;
+        text-align: center;
+    }
+    .error-pane .error-title{
+        font-size: 1rem;
+    }
+    .error-pane .error-body{
+        display:none;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1100px){
+    .App .main-body .search-pane #search-form{
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .result-set .image-result {
+        width: 230px;
+        height: 230px;
+        margin-block: 2vw;
+        box-shadow: 0 0 8px #f38b03dd;
+    }
+    .search-time .collapse-btn i::before{
+        outline: none;
+    }
+}
+@media screen and (min-width: 401px) and (max-width: 720px){
+
+    .result-set .image-result {
+        width: 35vw;
+        height: 35vw;
+        min-width: 35vw;
+        max-width: 280px;
+        max-height: 280px;
+        min-height: 35vw;
+        margin-block: 2vw;
+        box-shadow: 0 0 8px #f38b03dd;
+    }
+}
+@media screen and (min-width: 1185px){
+    .results-wrapper .result-set .media-results {
+        text-align-last: left;
+    }
+}
+
+@keyframes Bounce {
+    50%{
+        transform: translateY(5px);
+    }
+}
+@keyframes Bouncee {
+    50%{
+        transform:translateY(3vh) ;
+    }
+}
