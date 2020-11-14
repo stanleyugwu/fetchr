@@ -1,19 +1,31 @@
-#FOR HEROKU DEPLOY client/public client/src client/node_module client/.env 
-#client/build
-client/public
+#HEROKU DEPLOY NEEDED RESOURCES::
+#client/public #models #.env #admin.json #keys.js #package.json #Procfile #server.js
 
-client/src
-client/src/fonts
-client/src/images
+#NOT NEEDED (un-comment below when deploying):
+#client/
+#!client/build
+#*.txt
+#*-lock.json
+#README.md
 
-*/.env
+
+
+#GITHUB PUSH NEEDED RESOURCES::
+#client/public #client/src #client/package.json #models #.gitignore #package.json #README.md #testBlob.txt #server.js
+
+#NOT NEEDED: (un-comment below when pushing to github):
+client/build
+client/.env
+.env
+*.json
+!package.json
+keys.js
+Procfile
+ignore.txt
+
 */package-lock.json
-*/node_modules
-
+package-lock.json
 node_modules
-#/.env
-/package-lock.json
-#keys.js
-#admin.json
-*.txt
-Oldserver.js
+*/node_modules
+*/*/node_modules
+*/**/node_modules
