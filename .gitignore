@@ -1,6 +1,4 @@
 node_modules
-package-lock.json
-client/src/fonts/
+*-lock.json
+.gitignore
 ignore.txt
-node_modules
-testBlob.txt
