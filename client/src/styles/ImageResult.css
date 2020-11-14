@@ -1,0 +1,83 @@
+.image-result {
+    overflow: auto;
+    width: 240px;
+    max-width: 300px;
+    min-width: 200px;
+    min-height: 200px;
+    position: relative;
+    height: 240px;
+    max-height: 300px;
+    box-shadow: 0 0 14px #f38b03dd;
+    border-radius: 0.8vw;
+    display: inline-block;
+    margin-inline: 1vw;
+    margin-block: 1vw;
+  }
+  .image-result:hover .img-cover {
+    opacity: 1;
+  }
+  .image-result .img-wrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+  }
+  .img-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+  }
+  .image-result .img-cover {
+    position: absolute;
+    top: 0px;
+    border-radius: 1vw;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    padding: 1vw;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+  }
+  .img-cover div{
+      display: contents;
+  }
+  .img-cover a button, .img-cover > div a button {
+    padding: 0.5vw;
+    background: transparent;
+    border: 1px solid var(--cta-primary);
+    cursor: pointer;
+    font-family: "Raleway";
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: var(--transition);
+    outline: none;
+    color: var(--cta-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .img-cover a{
+    text-decoration: none;
+    display: block;
+    margin-top: 2vh;
+  }
+  .img-cover a:first-child{
+      margin-top: 0;
+  }
+  .img-cover button i {
+    font-size: 1.3rem;
+    line-height: 0;
+    vertical-align: baseline;
+    margin-right: 0.8vw;
+  }
+  .img-cover button:hover{
+    background: var(--cta-primary);
+    color: var(--dark);
+  }
+  .img-cover a button#visit {
+    margin-top: 3vh;
+  }
