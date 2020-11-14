@@ -1,0 +1,6 @@
+node_modules
+package-lock.json
+client/src/fonts/
+ignore.txt
+node_modules
+testBlob.txt
