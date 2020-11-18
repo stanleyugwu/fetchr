@@ -112,7 +112,7 @@
   .options-block .field{
     cursor: pointer;
         background: transparent;
-        margin-inline: 2%;
+        margin:0 2%;
         display: inline;
         border: none;
         font-family: var(--font-family);

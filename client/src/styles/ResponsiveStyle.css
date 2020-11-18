@@ -3,13 +3,13 @@
         padding-top: 1vh;
     }
     .App .main-body .search-pane .search-mode-toggler button {
-        padding: 1.5vh 4vw;
+        padding: 3.5% 4vw;
     }
     .App .main-body .search-pane #search-form{
         width: 90vw;
     }
     #search-form #searchbox{
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
     #search-form .searchbtn-wrapper button i{
         font-size: 2.3rem;
@@ -64,10 +64,30 @@
 }
 
 @media screen and (max-width: 400px){
+    .App .main-body .search-pane #search-form .text-block label.boxLabel {
+        border-top-left-radius:0;
+        border-bottom-right-radius: 0;
+        border-radius:5px;
+    }
+    .search-pane .searchbtn-wrapper button {
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .search-pane form .searchbox-wrapper{
+        padding: 2vw 0.5vw 2vw 0vw;
+    }
+    .search-pane form .searchbox-wrapper input{
+        border: none;
+        border-top-left-radius: none;
+        font-size: calc(5px + var(--font-size)) ;
+    }
+    .App .main-body .search-pane #search-form .options-block .field{
+        margin: 0 3.5vw;
+    }
     .result-set .image-result {
         width: 230px;
         height: 230px;
-        margin-block: 2vw;
+        margin:2vw 0;
         box-shadow: 0 0 8px #f38b03dd;
     }
     .search-time .collapse-btn i::before{
