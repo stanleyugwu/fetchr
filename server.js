@@ -13,12 +13,12 @@ process.binding('http_parser').HTTPParser = require('http-parser-js').HTTPParser
 const app = express();
  
 //Google custom search keys (image)
-const apiKey_image = process.env.cseApiKey_image || require('./keys.js').cseApiKey_image;
-const pseId_image = process.env.pseId_image || require('./keys.js').pseId_image;
+const apiKey_image = process.env.cseApiKey_image;
+const pseId_image = process.env.pseId_image;
 
-//google custom search keys (video)
-const apiKey_video = process.env.cseApiKey_video || require('./keys.js').cseApiKey_video;
-const pseId_video = process.env.pseId_video || require('./keys.js').pseId_video;
+//Google custom search keys (video)
+const apiKey_video = process.env.cseApiKey_video
+const pseId_video = process.env.pseId_video
 
 
 //App&Database Connection Options (firebase)
@@ -26,7 +26,7 @@ var fireBaseConnected = false;
 
 try{
     const admin = require('firebase-admin');
-    const serviceAccount = require('./admin.json');
+    const serviceAccount = process.env.firebaseAdminObject;
     admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
         databaseURL: "https://devvie.firebaseio.com/",
