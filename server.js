@@ -26,9 +26,9 @@ var fireBaseConnected = false;
 
 try{
     const admin = require('firebase-admin');
-    const serviceAccount = process.env.firebaseAdminObject;
+    const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS;
     admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount),
+        credential: admin.credential.applicationDefault(),
         databaseURL: "https://devvie.firebaseio.com/",
         authDomain: "devvie.firebaseapp.com",
     });
