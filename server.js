@@ -48,6 +48,7 @@ try{
 
     var search = appRef.child('/searchHistory');
 }catch(e){
+    console.log(e)
     fireBaseConnected = false;
 }
 //App connection port
