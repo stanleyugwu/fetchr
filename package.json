@@ -6,9 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "stir": "nodemon --http-parser=legacy server.js",
-        "start": "node --http-parser=legacy server.js",
-        "for-github": "git rm -r --cached Procfile admin.json keys.js .env client/.env && git commit --reuse-message=head",
-        "for-master": "git add admin.json keys.js Procfile client/.env .env && git commit -m\"added master creds (merge ready)\""
+        "start": "node --http-parser=legacy server.js"
     },
     "keywords": [
         "fetchr",
