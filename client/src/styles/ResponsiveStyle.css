@@ -90,6 +90,12 @@
         margin:2vw 0;
         box-shadow: 0 0 8px #f38b03dd;
     }
+    .result-set .image-result .img-cover a {
+        padding: 2%;
+    }
+    .result-set .image-result .img-cover a > button{
+        padding: 3%;
+    }
     .search-time .collapse-btn i::before{
         outline: none;
     }

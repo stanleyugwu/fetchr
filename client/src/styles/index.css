@@ -1,5 +1,5 @@
 @import '../fonts/mdi/css/materialdesignicons.min.css';
-
+/*@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');*/
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway/static/Raleway-SemiBold.ttf");
@@ -20,7 +20,7 @@ html{
   --white: #eee;
   
 
-  --font-family: 'Raleway', 'Trebuchet MS';
+  --font-family: 'Source Sans Pro','Raleway', 'Trebuchet MS';
   --box-shadow: 0 0 10px 3px var(--text);
   --font-size: calc(10px + 1vmin);
   --transition: 0.5s all ease-in-out;

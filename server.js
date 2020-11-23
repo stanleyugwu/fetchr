@@ -26,11 +26,10 @@ var fireBaseConnected = false;
 
 try{
     const admin = require('firebase-admin');
-    const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS;
     admin.initializeApp({
         credential: admin.credential.applicationDefault(),
-        databaseURL: "https://devvie.firebaseio.com/",
-        authDomain: "devvie.firebaseapp.com",
+        databaseURL: process.env.databaseURL,
+        authDomain: process.env.authDomain,
     });
     const appRef = admin.database().ref('/fetchrApp');
     fireBaseConnected = true;
@@ -48,12 +47,14 @@ const PORT = process.env.PORT || 8080;
 var searchHistory_image = require('./models/searchHistory_image');
 var searchHistory_video = require('./models/searchHistory_video');
 
-if(!fireBaseConnected){
+if(!fireBaseConnected && process.env.ENV == 'Development'){
     const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/searchHistory';
     //connect to mongoDB
     mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true}).then(()=>{
         console.log('App Connected to MongoDB.')
-    }).catch(e => console.log(e));
+    }).catch(e => console.log('MongoDb: '+e));
+}else if(!fireBaseConnected && !!process.env.ENV && String(process.env.ENV).toLowerCase() == 'production'){
+    console.log('Firebase: Error connecting to firebase..')
 }
 
 //set static folder

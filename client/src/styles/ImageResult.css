@@ -11,7 +11,6 @@
     border-radius: 0.8vw;
     display: inline-block;
     margin:0 1vw;
-    margin: 1vw 0;
   }
   .image-result:hover .img-cover {
     opacity: 1;
