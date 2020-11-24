@@ -8,7 +8,12 @@
 }
 .footer .devvie{
     background: var(--trans-black);
-    padding: 0.5%;
+    padding: 0;
+    margin:0;
+    font-size: 0.9rem;
+}
+.devvie a{
+    color: var(--cta-primary);
 }
 .devvie .mdi-heart{
     color: red;
@@ -17,11 +22,11 @@
 
 @keyframes Glow{
     from{
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-shadow: none;
     }
     to{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         text-shadow: 0 0 20px red;
     }
 }

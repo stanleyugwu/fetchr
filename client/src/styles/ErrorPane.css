@@ -5,27 +5,31 @@
     background: var(--dark);
     box-shadow: 0 0 10px 2px red;
     border-radius: 1vw;
-    width: 70%;
+    width: max-content;
     margin: auto;
-}
-.error-pane *:not([class="retry-cta"]){
-    padding:0.3vw;
-    color: var(--grey);
+    min-width: 50%;
+    padding:1% 0;
+    max-width: 100%;
 }
 
 .error-pane .error-title{
     text-align: center;
     font-family: monospace;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    color: var(--text);
+    line-height: 0.5;
 }
-.error-pane .error-body{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 500;
-    font-size: 1.15rem;
+.error-pane .error-image{
+    width: max-content;
+    max-width: 100px;
+    padding-right: 3%;
 }
+.error-image img{
+    width: 100%;
+}
+
 .error-pane .retry-cta{
     text-align: center;
-    padding: 1vw 0 1vh;
 }
 .error-pane .retry-cta button{
     color: var(--cta-primary);
@@ -33,10 +37,10 @@
     font-weight: 800;
     background: transparent;
     border: none;
+    border-bottom: 1px solid var(--cta-primary);
     cursor: pointer;
     font-size: 1.1rem;
-    outline: 1px solid var(--cta-primary);
-    padding: 0.5vh 1vw;
+    outline: none;
     transition: var(--transition);
 }
 .error-pane .retry-cta button:hover{

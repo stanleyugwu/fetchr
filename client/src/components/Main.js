@@ -21,7 +21,7 @@ class Main extends React.Component {
       pageNumber: '',
       quantity: 1,
       loading: false,
-      loadState: 'Searching ',
+      loadState: 'Searching For ',
       searchFailed: false,
       searchResults: [],
       searchCount: 0
@@ -144,6 +144,7 @@ class Main extends React.Component {
                   <input
                     id="searchbox"
                     type="search"
+                    autoComplete="off"
                     tabIndex="1"
                     required={true}
                     onChange={this.handleQueryEntry}

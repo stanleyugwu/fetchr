@@ -42,9 +42,11 @@
 .set-info .search-time .collapse-btn {
     padding-right: 3vw;
     cursor: pointer;
+    position: relative;
+    display: inline-flex;
 }
 .search-time .collapse-btn i {
-    font-size: calc(20px + var(--font-size));
+    font-size: 2rem;
     color: var(--cta-primary);
     display: contents;
 }

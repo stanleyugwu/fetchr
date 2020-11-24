@@ -1,89 +1,4 @@
-@media screen and (max-width: 920px) {
-    #root .App .header{
-        padding-top: 1vh;
-    }
-    .App .main-body .search-pane .search-mode-toggler button {
-        padding: 3.5% 4vw;
-    }
-    .App .main-body .search-pane #search-form{
-        width: 90vw;
-    }
-    #search-form #searchbox{
-        font-size: 1.25rem;
-    }
-    #search-form .searchbtn-wrapper button i{
-        font-size: 2.3rem;
-    }
-    .options-block .pagination input::-webkit-input-placeholder{
-        font-size: 1rem;
-    }
-    #search-form .searchbtn-wrapper .loader-wrapper_v-small .circle{
-        animation-name: Bounce;
-    }
-    .main-body .results-wrapper{
-        margin-top: 3vh;
-    }
-    .results-wrapper .loader-wrapper_normal p{
-        font-size: calc(8px + 2vw);
-        margin-top: 20px;
-    }
-    .results-wrapper .loader-wrapper_normal .loader .circle{
-        width: 5vmin;
-        min-width: 20px;
-        height: 5vmin;
-        min-height: 20px;
-        margin-right: 1vw;
-        animation-name: Bouncee;
-    }
-}
-
-@media screen and (min-width: 601px) and (max-width: 1100px){
-    .results-wrapper .loader-wrapper_normal p{
-        margin-top: 10px;
-    }
-}
-
-@media screen and (max-width: 700px){
-    .results-wrapper .title-txt .lefter {
-        border-bottom: 2px solid #ddd4;
-        width: 100%;
-        text-align: center;
-    }
-    .error-pane .error-title{
-        font-size: 1rem;
-    }
-    .error-pane .error-body{
-        display:none;
-    }
-}
-
-@media screen and (min-width: 750px) and (max-width: 1100px){
-    .App .main-body .search-pane #search-form{
-        width: 70vw;
-    }
-}
-
-@media screen and (max-width: 400px){
-    .App .main-body .search-pane #search-form .text-block label.boxLabel {
-        border-top-left-radius:0;
-        border-bottom-right-radius: 0;
-        border-radius:5px;
-    }
-    .search-pane .searchbtn-wrapper button {
-        border-bottom-right-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-    .search-pane form .searchbox-wrapper{
-        padding: 2vw 0.5vw 2vw 0vw;
-    }
-    .search-pane form .searchbox-wrapper input{
-        border: none;
-        border-top-left-radius: none;
-        font-size: calc(5px + var(--font-size)) ;
-    }
-    .App .main-body .search-pane #search-form .options-block .field{
-        margin: 0 3.5vw;
-    }
+/*
     .result-set .image-result {
         width: 230px;
         height: 230px;
@@ -117,7 +32,7 @@
     .results-wrapper .result-set .media-results {
         text-align-last: left;
     }
-}
+} */
 
 @keyframes Bounce {
     50%{
@@ -129,3 +44,75 @@
         transform:translateY(3vh) ;
     }
 }
+
+@media screen and (max-width:582px){
+    .main-body .search-pane form{
+      width: 98%;
+    }
+    .options-block .field{
+        margin: 0 5%;
+    }
+    .search-pane .options-block .pagination {
+        padding-bottom: 0.2%;
+      }
+  }
+
+  @media screen and (min-width:583px) and (max-width:1022px){
+    .main-body .search-pane form{
+      width: 75%;
+    }
+  }
+
+  @media screen and (max-width:480px){
+    .search-pane form .boxLabel input{
+      border-bottom: none;
+    }
+    #search-form .text-block label.boxLabel {
+        border-top-left-radius:0;
+        border-bottom-right-radius: 0;
+        border-radius:5px;
+    }
+    .search-pane .searchbtn-wrapper button {
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .search-pane form .searchbox-wrapper{
+        padding: 0.3rem;
+    }
+    .search-pane form .searchbox-wrapper input{
+        border: none;
+        width: 100%;
+        border-top-left-radius: none;
+        font-size: 1rem;
+    }
+    .results-wrapper .error-pane {
+        box-shadow: none;
+        border-bottom: 1px dotted #ff00008a;
+        padding: 1%;
+    }
+    .results-wrapper .error-pane .error-title{
+        line-height: 1;
+        padding: 0;
+        font-size: 1rem;
+    }
+    .results-wrapper .error-pane .error-image img{
+        width: 80%;
+    }
+    .results-wrapper .error-pane .retry-cta button{
+        font-size: 1rem;
+    }
+    .search-pane .search-mode-toggler{
+        border-top-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+    }
+    .search-pane .search-mode-toggler button{
+        padding:0.5rem 1.1rem;
+    }
+    .search-pane .search-mode-toggler button:first-child {
+        border-top-left-radius:1.5rem;
+      }
+      .search-pane .search-mode-toggler button:nth-child(2){
+        border-bottom-right-radius:1.5rem;
+      }
+  }
+  

@@ -172,7 +172,7 @@ app.get('/imageSearch/:term', (req, res) => {
     let url = `https://www.googleapis.com/customsearch/v1?q=${term}&start=${start}&num=${num}&searchType=image&cx=${pseId_image}&key=${apiKey_image}`;
 
     //google search
-    fetch(url).then(res => res.json()).then(json => json.items).then(results => {
+    fetch(url,{method:'GET'}).then(res => res.json()).then(json => json.items).then(results => {
 
         resultsLength = results.length;
 

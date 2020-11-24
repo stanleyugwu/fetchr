@@ -9,7 +9,7 @@ export default function Loader(props){
                 <div className="circle"></div>
                 <div className="circle"></div>
               </div>
-              {props.size !== 'v-small' && <p>{props.progress}</p>}
+              {props.size !== 'v-small' && <p>{props.progress}...</p>}
         </div>
     )
 }
