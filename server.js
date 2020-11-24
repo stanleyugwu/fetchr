@@ -42,6 +42,7 @@ try{
     console.log('App connected to firebase')
 
     var search = appRef.child('/searchHistory');
+    console.log(admin)
 }catch(e){
     fireBaseConnected = false;
 }
@@ -193,7 +194,7 @@ app.get('/imageSearch/:term', (req, res) => {
         })
     }).catch(e => {
         console.log(e)
-        res.status(400).send('Network Error!, Failed to fetch...')
+        res.status(400).send('Network Error!, Failed to fetch...\n'+e)
     })
 });
 
