@@ -12,9 +12,6 @@ process.binding('http_parser').HTTPParser = require('http-parser-js').HTTPParser
 //Init express
 const app = express();
 
-//CORS
-app.use(cors());
- 
 //use cors
 app.use(cors({
     "origin": "*",
