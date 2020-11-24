@@ -176,7 +176,7 @@ app.get('/imageSearch/:term', (req, res) => {
 
 
      //search url
-    let url = `https://www.googleapis.com/customsearch/v1?q=${term}&start=${start}&num=${num}&searchType=image&cx=${pseId_image}&key=${apiKey_image}`;
+    let url = `https://www.googleapis.com/customsearch/v1?q=${term}&start=${start}&num=${num}&getbinary=${getImagesBinary}&searchType=image&cx=${pseId_image}&key=${apiKey_image}`;
 
     //google search
     fetch(url, {
@@ -184,8 +184,7 @@ app.get('/imageSearch/:term', (req, res) => {
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then(res => res.json()).then(json => json.items).then(results => {
-
+    }).then(res => {console.log(res); return res.json()}).then(json => {return json.items}).then(results => {
         resultsLength = results.length;
 
         results.forEach((result) => {
