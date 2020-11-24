@@ -5,8 +5,8 @@
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "stir": "nodemon --http-parser=legacy server.js",
-        "start": "node --http-parser=legacy server.js"
+        "stir": "nodemon server.js",
+        "start": "node server.js"
     },
     "keywords": [
         "fetchr",

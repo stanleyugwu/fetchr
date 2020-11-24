@@ -5,14 +5,6 @@
     padding: 8vh 0;
 }
 .search-mode-toggler{
-  /* border:1px solid var(--cta-primary);
-  border-spacing: 0;
-  border-top-left-radius: 3.5vh;
-  border-bottom-right-radius: 3.5vh;
-  position: relative;
-  display: block;
-  padding:0;
-  line-height: 1.9; */
   border:1px solid var(--cta-primary);
   border-top-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -26,19 +18,6 @@
   border-bottom-right-radius:2rem;
 }
 .search-mode-toggler button {
-    /* margin: 0;
-    padding: 0.3rem 4%;
-    font-weight: 700;
-    border:none;
-    position: relative;
-    cursor: pointer;
-    display: inline;
-    color: var(--cta-primary);
-    font-family: "Raleway";
-    background: transparent;
-    outline: none;
-    transition: var(--transition);
-    line-height: 1.9; */
     border: 0;
     background: transparent;
     outline: none;
@@ -200,7 +179,7 @@
   }
   .results-wrapper .title-txt{
     text-align: left;
-    margin: 10vh 0;
+    margin: 5% 0;
   }
   .title-txt .lefter {
     border-bottom: 2px solid #ddd5;

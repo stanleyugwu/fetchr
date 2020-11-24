@@ -1,8 +1,8 @@
 //Dependencies
 const express = require('express');
-const { admin } = require('firebase-admin/lib/credential');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const cors = require('cors');
 //const bingSearch = require('bing.search');
 const fetch = require('node-fetch');
 
@@ -12,6 +12,12 @@ process.binding('http_parser').HTTPParser = require('http-parser-js').HTTPParser
 //Init express
 const app = express();
  
+//use cors
+app.use(cors({
+    "origin": "*",
+    "methods": "GET"
+}))
+
 //Google custom search keys (image)
 const apiKey_image = process.env.cseApiKey_image;
 const pseId_image = process.env.pseId_image;
@@ -172,7 +178,12 @@ app.get('/imageSearch/:term', (req, res) => {
     let url = `https://www.googleapis.com/customsearch/v1?q=${term}&start=${start}&num=${num}&searchType=image&cx=${pseId_image}&key=${apiKey_image}`;
 
     //google search
-    fetch(url,{method:'GET'}).then(res => res.json()).then(json => json.items).then(results => {
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => res.json()).then(json => json.items).then(results => {
 
         resultsLength = results.length;
 

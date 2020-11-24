@@ -34,7 +34,8 @@
 .set-info .search-time{
     padding-right: 1vw;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
+    font-weight: 600;
+    letter-spacing: -1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,8 +56,10 @@
     outline: 1px solid red;
 }
 .result-set .media-results{
-    padding: 3% 2% 0;
     text-align: center;
+    padding: 3% 1.5%;
+    display: inline-block;
+    width: 100%;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
     animation: moveIn 0.5s alternate ease-in-out;

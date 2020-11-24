@@ -66,7 +66,12 @@ class Main extends React.Component {
     
     let state = this.state, query = state.searchQuery, pagination = state.pageNumber, quantity = state.quantity; 
     
-    fetch(`/imageSearch/${query}?offset=${pagination}&num=${quantity}&getbinary=true`, {method: 'GET'}).then(res => {
+    fetch(`/imageSearch/${query}?offset=${pagination}&num=${quantity}&getbinary=true`, {
+      method: 'GET',
+      headers: {
+          'Content-Type': 'application/json'
+      }
+  }).then(res => {
       this.setState({loadState: 'Loading '});
       return res.json()
     }).then(data => {
