@@ -3,4 +3,4 @@ node_modules
 ignore.txt
 .env
 admin.json
-client/public
+# client/public
