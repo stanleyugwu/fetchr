@@ -1,7 +1,7 @@
 //Dependencies
 const express = require('express');
 const mongoose = require('mongoose');
-require('dotenv').config();
+require('dotenv').config();//for local development
 const cors = require('cors');
 //const bingSearch = require('bing.search');
 const fetch = require('node-fetch');
@@ -42,7 +42,6 @@ try{
     console.log('App connected to firebase')
 
     var search = appRef.child('/searchHistory');
-    console.log(admin)
 }catch(e){
     fireBaseConnected = false;
 }
@@ -184,7 +183,7 @@ app.get('/imageSearch/:term', (req, res) => {
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then(res => {console.log(res); return res.json()}).then(json => {return json.items}).then(results => {
+    }).then(res => res.json()).then(json => json.items).then(results => {
         resultsLength = results.length;
 
         results.forEach((result) => {
