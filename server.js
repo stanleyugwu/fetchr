@@ -32,8 +32,13 @@ var fireBaseConnected = false;
 
 try{
     const admin = require('firebase-admin');
+    let isLocal = process.env.ENV == 'development'; 
+
+    //use local admin.json when in dev mode else access it through env var
+    var certificate = isLocal ? admin.credential.applicationDefault() : admin.credential.cert(JSON.parse(process.env.firebaseAdminObject));
+    
     admin.initializeApp({
-        credential: admin.credential.applicationDefault(),
+        credential: certificate,
         databaseURL: process.env.databaseURL,
         authDomain: process.env.authDomain,
     });
@@ -53,13 +58,15 @@ const PORT = process.env.PORT || 8080;
 var searchHistory_image = require('./models/searchHistory_image');
 var searchHistory_video = require('./models/searchHistory_video');
 
-if(!fireBaseConnected && process.env.ENV == 'Development'){
+//firebase connection error? log the error in production an fallback to mongoDb in development
+if(!fireBaseConnected && process.env.ENV == 'development'){
     const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/searchHistory';
     //connect to mongoDB
     mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true}).then(()=>{
         console.log('App Connected to MongoDB.')
     }).catch(e => console.log('MongoDb: '+e));
-}else if(!fireBaseConnected && !!process.env.ENV && String(process.env.ENV).toLowerCase() == 'production'){
+
+}else if(!fireBaseConnected && !!process.env.ENV && process.env.ENV == 'production'){
     console.log('Firebase: Error connecting to firebase..')
 }
 
@@ -109,7 +116,7 @@ app.get('/imageSearch/:term', (req, res) => {
             res.status(200).send(output);
 
             //save search history to either mongoDb or firebase
-            if(!fireBaseConnected){
+            if(!fireBaseConnected && process.env.ENV == 'development'){
                new searchHistory_image({
                    searchTerm: term,
                    timestamp: Date.now()
@@ -117,7 +124,7 @@ app.get('/imageSearch/:term', (req, res) => {
                    if(error) console.log('nosave',error)
                });
                return 'SENT'
-           }else{
+           }else if(fireBaseConnected){
                const imageSearchHistory = search.child('/imageSearchHistory');
                imageSearchHistory.push({
                    searchTerm: term,
@@ -187,8 +194,14 @@ app.get('/imageSearch/:term', (req, res) => {
         resultsLength = results.length;
 
         results.forEach((result) => {
-            //get image buffer
-            fetchBuffer(result);
+            if(getImagesBinary == 'true'){
+                //build output with images buffers
+                fetchBuffer(result);
+            }else{
+                //build output without images bufferS
+                output.push(result);
+                isOutputComplete();
+            }
         })
     }).catch(e => {
         console.log(e)
