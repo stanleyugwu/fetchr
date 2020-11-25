@@ -13,6 +13,8 @@
     align-items: center;
     background: var(--trans-bg10);
     justify-content: space-between;
+    flex-wrap: wrap;
+    word-break: break-all;
 }
 .set-info .two-wrap {
     display: flex;
