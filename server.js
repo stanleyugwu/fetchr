@@ -16,7 +16,7 @@ const app = express();
 app.use(cors({
     "origin": "*",
     "methods": "GET"
-}))
+}));
 
 //Google custom search keys (image)
 const apiKey_image = process.env.cseApiKey_image;
@@ -32,10 +32,10 @@ var fireBaseConnected = false;
 
 try{
     const admin = require('firebase-admin');
-    let isLocal = process.env.ENV == 'development'; 
+    let isProd = process.env.NODE_ENV == 'production';
 
     //use local admin.json when in dev mode else access it through env var
-    var certificate = isLocal ? admin.credential.applicationDefault() : admin.credential.cert(JSON.parse(process.env.firebaseAdminObject));
+    var certificate = isProd ? admin.credential.cert(JSON.parse(process.env.firebaseAdminObject)) : admin.credential.applicationDefault();
     
     admin.initializeApp({
         credential: certificate,
