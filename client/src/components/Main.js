@@ -222,7 +222,7 @@ class Main extends React.Component {
           {this.state.loading && <Loader progress={this.state.loadState + this.state.searchMode + 's'} size="normal"/>}
           <div className="results-inner">
 
-              {this.state.searchResults.map((set, ind) => <ResultSet key={ind} setData={set}/>)}
+              {this.state.searchResults.length > 0 && this.state.searchResults.map((set, ind) => <ResultSet key={ind} setData={set}/>)}
           </div>
         </div>
       </main>
