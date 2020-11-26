@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "stir": "nodemon server.js",
         "start": "node server.js",
-        "install": "npm i && cd client && npm i && cd ../",
+        "install_pkgs": "npm i && cd client && npm i && cd ../",
         "start_frontend": "cd client && npm start",
         "serve_build": "cd client && npm run build && cd ../ && npm start"
     },
